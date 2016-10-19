@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<zamowienie>
+   <data_zamowienia>2012-12-12</data_zamowienia>
+  <wyslac_do kraj="PL">
+    <osoba>Krzysztof Nowak</osoba>
+    <ulica>Niepodleglosci</ulica>
+    <numer>799A</numer>
+    <kod_pocztowy>81-100</kod_pocztowy>
+    <miasto>Sopot</miasto>
+    <wojewodztwo>pomorskie</wojewodztwo>
+  </wyslac_do>
+  <rachunek kraj="PL">
+    <osoba>Krzysztof Nowak</osoba>
+    <ulica>Niepodleglosci</ulica>
+    <numer>799A</numer>
+    <kod_pocztowy>81-100</kod_pocztowy>
+    <miasto>Sopot</miasto>
+  </rachunek>
+  <komentarz>Pilnie potrzebne</komentarz>
+  <towary>
+    <towar kod="LSR-456-45">
+      <nazwa_towaru>Silnik iFlight 2216</nazwa_towaru>
+      <producent>Kaszankatorzy</producent>
+      <ilosc>6</ilosc>
+      <cena_jednostkowa>58.50</cena_jednostkowa>
+    </towar>
+    <towar kod="ABS-345-34">
+      <nazwa_towaru>Kontroler ESC 30A iFlight</nazwa_towaru>
+      <producent>Kiszki</producent>
+      <ilosc>6</ilosc>
+      <cena_jednostkowa>62.00</cena_jednostkowa>
+    </towar>
+    <towar kod="ASR-342-12">
+      <nazwa_towaru>Konik na biegunkach XD</nazwa_towaru>
+      <producent>Allahowie z somonina</producent>
+      <ilosc>2</ilosc>
+      <cena_jednostkowa>69.69</cena_jednostkowa>
+    </towar>
+  </towary>
+</zamowienie>

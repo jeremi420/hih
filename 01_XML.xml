@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Zamowienie>
+  <rachunek>
+    <Osoba>
+      Krzysztof Nowak
+    </Osoba>
+    <ulica>
+      Niepodleglosci
+    </ulica>
+    <numer>
+      799A
+    </numer>
+    <kod>
+      81-100
+    </kod>
+    <Miasto>
+      Sopot
+    </Miasto>
+   </rachunek>
+  <Towary>
+    <towar numer_katalogowy="ENG-11">
+      <nazwatowaru>
+        Smiglo 8x4.7
+      </nazwatowaru>
+      <ilosc>
+        6
+      </ilosc>
+      <cena_jednostkowa>
+        10.50
+      </cena_jednostkowa>
+    </towar>
+    <towar>
+      <nazwatowaru>
+        Dumper MM M3
+      </nazwatowaru>
+      <ilosc>
+        24
+      </ilosc>
+      <cena_jednostkowa>
+        0.80
+      </cena_jednostkowa>
+    </towar>
+  </Towary>
+</Zamowienie>

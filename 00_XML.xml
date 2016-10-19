@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="Windows-1250"?>
+<menu_na_sniadanie>
+	<potrawa>
+		<nazwa>Wafle belgijskie</nazwa>
+		<cena>3.20</cena>
+		<opis>Dwa duże belgijskie wafle z syropem klonowym</opis>
+		<kalorie>650</kalorie>
+	</potrawa>
+	<potrawa>
+		<nazwa>Wafle belgijskie w polewie truskawkowej</nazwa>
+		<cena>4.50</cena>
+		<opis>Dwa duże belgijskie wafle z polewą truskawkową oraz bitą śmietaną</opis>
+		<kalorie>900</kalorie>
+	</potrawa>
+	<potrawa>
+		<nazwa>Berry-Berry Belgian Waffles</nazwa>
+		<cena>5.29</cena>
+		<opis>Dwa duże belgijskie wafle z polewą jagodową oraz bitą śmietaną</opis>
+		<kalorie>900</kalorie>
+	</potrawa>
+	<potrawa>
+		<nazwa>Tost</nazwa>
+		<cena>1.20</cena>
+		<opis>Cienki tost przenny</opis>
+		<kalorie>600</kalorie>
+	</potrawa>
+	<potrawa>
+		<nazwa>Śniadanie kontynentalne</nazwa>
+		<cena>25.00</cena>
+		<opis>Dwa jajka, bekon, pieczywo, sok</opis>
+		<kalorie>950</kalorie>
+	</potrawa>
+</menu_na_sniadanie>

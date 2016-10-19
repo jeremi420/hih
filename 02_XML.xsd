@@ -1,0 +1,86 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+   <xsd:annotation>
+      <xsd:documentation xml:lang="pl">
+         XML Schema do pliku zamowienia.
+      </xsd:documentation>
+   </xsd:annotation>
+
+   <xsd:element name="zamowienie" type="zamowienie_typ"/>
+  
+  <xsd:element name="komentarz" type="xsd:string"/>
+
+   <xsd:complexType name="zamowienie_typ">
+      <xsd:sequence>
+        <xsd:element name="data_zamowienia" type="xsd:date"/>
+         <xsd:element name="wyslac_do" type="adres_typ"/>
+         <xsd:element name="rachunek" type="adres_typ"/>
+         <xsd:element ref="komentarz" minOccurs="0"/>
+         <xsd:element name="towary" type="towary_typ"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="adres_typ">
+      <xsd:sequence>
+         <xsd:element name="osoba" type="xsd:string"/>
+         <xsd:element name="ulica" type="xsd:string"/>
+         <xsd:element name="numer" type="xsd:string"/>
+         <xsd:element name="kod_pocztowy" type="kod_pocztowy_typ"/>
+         <xsd:element name="miasto" type="xsd:string"/>
+        <xsd:element name="wojewodztwo" type="wojewodztwo_typ" minOccurs="0"/>
+      </xsd:sequence>
+      <xsd:attribute name="kraj" type="xsd:NMTOKEN" fixed="PL"/>
+   </xsd:complexType>
+
+   <xsd:complexType name="towary_typ">
+      <xsd:sequence>
+         <xsd:element name="towar" minOccurs="0" maxOccurs="unbounded">
+         <xsd:complexType>
+            <xsd:sequence>
+               <xsd:element name="nazwa_towaru" type="nazwa_towaru_typ"/>
+              <xsd:element name="producent" type="xsd:string"/>
+               <xsd:element name="ilosc" type="xsd:decimal"/>
+               <xsd:element name="cena_jednostkowa" type="cena_jednostkowa_typ"/>
+            </xsd:sequence>
+           <xsd:attribute name="kod" type="kod_typ"/>
+         </xsd:complexType>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:simpleType name="kod_pocztowy_typ">
+      <xsd:restriction base="xsd:string">
+         <xsd:pattern value="\d{2}-\d{3}"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+
+  <xsd:simpleType name="cena_jednostkowa_typ">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minExclusive value="0"/>
+      <xsd:maxExclusive value="10000"/>    
+    </xsd:restriction>
+  </xsd:simpleType>
+
+    <xsd:simpleType name="nazwa_towaru_typ">
+      <xsd:restriction base="xsd:string">
+        <xsd:minLength value="3"/>
+        <xsd:maxLength value="30"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+  <xsd:simpleType name="kod_typ">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z]{3}-\d{3}-\d{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="wojewodztwo_typ">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="pomorskie"/>
+      <xsd:enumeration value="zachodniopomorskie"/>
+      <xsd:enumeration value="kujawsko-pomorskie"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+ 
+
+</xsd:schema>
